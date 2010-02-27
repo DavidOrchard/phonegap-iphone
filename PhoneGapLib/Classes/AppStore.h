@@ -1,9 +1,8 @@
 //
 //  AppStore.h
-//  CityofAsh
 //
 //  Created by David Orchard on 20/09/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//  Copyright 2009 Ayogo Inc. All rights reserved.
 //
 
 #import <StoreKit/StoreKit.h>
