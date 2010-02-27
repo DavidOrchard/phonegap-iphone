@@ -73,6 +73,8 @@
 		88BA573D109BB46F00FB5E78 /* Accelerometer.h in Headers */ = {isa = PBXBuildFile; fileRef = 88BA573B109BB46F00FB5E78 /* Accelerometer.h */; };
 		88BA573E109BB46F00FB5E78 /* Accelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BA573C109BB46F00FB5E78 /* Accelerometer.m */; };
 		AA747D9F0F9514B9006C5449 /* PhoneGapLib_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* PhoneGapLib_Prefix.pch */; };
+		E9B21FD51138E8D900A402D3 /* AppStore.h in Headers */ = {isa = PBXBuildFile; fileRef = E9B21FD31138E8D900A402D3 /* AppStore.h */; };
+		E9B21FD61138E8D900A402D3 /* AppStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B21FD41138E8D900A402D3 /* AppStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,6 +145,8 @@
 		88BA573C109BB46F00FB5E78 /* Accelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Accelerometer.m; path = Classes/Accelerometer.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* PhoneGapLib_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneGapLib_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		D2AAC07E0554694100DB518D /* libPhoneGapLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPhoneGapLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9B21FD31138E8D900A402D3 /* AppStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppStore.h; path = Classes/AppStore.h; sourceTree = "<group>"; };
+		E9B21FD41138E8D900A402D3 /* AppStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppStore.m; path = Classes/AppStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,8 @@
 		888700D710922F56009987E8 /* Commands */ = {
 			isa = PBXGroup;
 			children = (
+				E9B21FD31138E8D900A402D3 /* AppStore.h */,
+				E9B21FD41138E8D900A402D3 /* AppStore.m */,
 				88BA573B109BB46F00FB5E78 /* Accelerometer.h */,
 				88BA573C109BB46F00FB5E78 /* Accelerometer.m */,
 				8887FD241090FBE7009987E8 /* Bonjour.h */,
@@ -336,6 +342,7 @@
 				8887FD9F1090FBE7009987E8 /* Sound.h in Headers */,
 				8887FDA11090FBE7009987E8 /* UIControls.h in Headers */,
 				88BA573D109BB46F00FB5E78 /* Accelerometer.h in Headers */,
+				E9B21FD51138E8D900A402D3 /* AppStore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +440,7 @@
 				8887FDA01090FBE7009987E8 /* Sound.m in Sources */,
 				8887FDA21090FBE7009987E8 /* UIControls.m in Sources */,
 				88BA573E109BB46F00FB5E78 /* Accelerometer.m in Sources */,
+				E9B21FD61138E8D900A402D3 /* AppStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
