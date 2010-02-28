@@ -17,6 +17,6 @@ AppStore.prototype.productList = function(productListCallback, options){
 // callback executed with: { quantity:'%d', productIdentifier:'%@', transactionReceipt:'%@'}
 AppStore.prototype.purchase = function( purchaseCallback, item, amount) {
 		__appstore_purchaseCallback_global_variable = purchaseCallback;
-    PhoneGap.exec("AppStore.purchase", "__appstore_purchaseCallback_global_variable", item, typeOf(amount) != "undefined" ? amount : 1);
+    PhoneGap.exec("AppStore.purchase", "__appstore_purchaseCallback_global_variable", item, amount !== undefined ? amount : 1);
 }
 
