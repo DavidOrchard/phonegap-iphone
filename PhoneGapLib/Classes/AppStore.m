@@ -9,14 +9,14 @@
 
 
 @implementation AppStore
-@synthesize purchaseCallback, productListCallback;
+@synthesize productListCallback, purchaseCallback;
 
 - (id)init
 {
-    if (self = [super init])
+    self = [super init];
     {
-		purchaseCallback= nil;
-		productListCallback = nil;
+		purchaseCallback= @"navigator.plugins.appStore._purchaseCallback";
+		productListCallback = @"navigator.plugins.appStore._productListCallback";
     }
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
  
@@ -30,16 +30,6 @@
 
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
 
-
-    NSUInteger argc = [arguments count];
-	
-	if (argc > 0) {
-		productListCallback = [[arguments objectAtIndex:0] retain];
-	} else {
-		NSLog(@"AppStore:productList: Missing 1st parameter.");
-		return;
-	}
-    
     NSArray *productIds = [options allValues];
     if( [productIds count] == 0 ) {
         NSLog(@"AppStore:productList: no arguments");
@@ -201,24 +191,17 @@
 - (void) purchase:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options  {
   NSUInteger argc = [arguments count];
 	
-	if (argc > 0) {
-		purchaseCallback = [[arguments objectAtIndex:0] retain];
-	} else {
-		NSLog(@"AppStore:purchase: missing callback.");
-		return;
-	}
-    
-    if( argc == 1 ) {
+    if( argc == 0 ) {
         NSLog(@"AppStore:purchase: missing item id");
         return;
     }
     
     NSLog(@"AppStore:purchase: %d arguments", argc);
 
-    SKPayment *payment = [SKPayment paymentWithProductIdentifier:[arguments objectAtIndex:1]];
-//    if( argc == 3 ) {
+    SKPayment *payment = [SKPayment paymentWithProductIdentifier:[arguments objectAtIndex:0]];
+//    if( argc == 2 ) {
         // then there's an amount as well
-//        NSString *amt = (NSString *) [arguments objectAtIndex:2];
+//        NSString *amt = (NSString *) [arguments objectAtIndex:1];
 //        [ payment setQuantity:[amt intValue]];
 //        payment.quantity = [amt intValue];  but this DOESN'T WORK
  //   }
